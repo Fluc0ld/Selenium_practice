@@ -59,3 +59,6 @@ class SeleniumBase:
         for element in elements:
             if element.text.lower() == name:
                 return element
+
+    def delete_cookie(self, cookie_name: str) -> None:
+        self.driver.delete_cookie(cookie_name)
